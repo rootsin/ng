@@ -162,18 +162,29 @@ echo "command[check_disk_boot]=$nrpe "${pt[$i]}"" >> $nrpe1
 fi
 done
 
+#Adding other custom commands
+echo "command[check_dovecot]=/usr/local/nagios/libexec/check_dovecot -d -i -p -w 100 -c 200" >> $nrpe1
+echo "command[check_logfiles]=/usr/local/nagios/libexec/check_logfiles -f /usr/local/nagios/etc/exim_log.cfg" >> $nrpe1
 
 #remove all files
+
+#make symlink for perl
+
+ln -s /usr/bin/perl /usr/local/bin/perl
+
+#All done
 
 echo "Cleaning up.."
 
 rm -rf $rsin
 
+rm -fv rsin.sh
+
 #restarting service
 
 chkconfig xinetd on
 
-service xinetd restart
+service xinetd start
 
 echo "All Done...Have a cup of Coffee after allowing port :P"
 
