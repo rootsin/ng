@@ -197,3 +197,5 @@ echo "...."
 echo "Thanks for using this scirpt!!"
 echo "...."
 echo "...."
+
+rm -- "$0"
