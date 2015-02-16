@@ -19,3 +19,5 @@ echo "...."
 
 
 echo "Close down the port 5666 in Firewall.."
+
+rm -- "$0"
