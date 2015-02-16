@@ -10,14 +10,12 @@ sed -i '/'nagios'/d' /etc/sudoers
 sed -i '/'nrpe'/d' /etc/services
 userdel nagios
 
-echo "...."
-echo "...."
+
 echo "...."
 echo "...."
 echo "Attention !!!!"           
 echo "...."
 echo "...."
-echo "...."
-echo "...."
+
 
 echo "Close down the port 5666 in Firewall.."
