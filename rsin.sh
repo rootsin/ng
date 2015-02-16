@@ -180,7 +180,7 @@ rm -rf $rsin
 
 rm -fv rsin.sh
 
-#restarting service
+#restarting service.
 
 chkconfig xinetd on
 
