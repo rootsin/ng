@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "...."
+echo "....."
 echo "...."
 echo ""Uninstalling nrpe and nagios plugin from the server...:
 /etc/init.d/xinetd stop
