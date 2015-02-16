@@ -191,3 +191,9 @@ echo "All Done...Have a cup of Coffee after allowing port :P"
 echo "Allow port 5666 in Firewall/CSF"
 echo 
 echo "DO NOT FORGET TO OPEN PORT"
+
+echo "...."
+echo "...."
+echo "Thanks for using this scirpt!!"
+echo "...."
+echo "...."
