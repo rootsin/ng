@@ -177,19 +177,15 @@ chown nagios: /home/nagios/ -R
 
 ln -s /usr/bin/perl /usr/local/bin/perl
 
-#All done
+#restarting service.
+chkconfig xinetd on
+service xinetd start
+
+#All done, now cleaning
 
 echo "Cleaning up.."
 
 rm -rf $rsin
-
-rm -fv rsin.sh
-
-#restarting service.
-
-chkconfig xinetd on
-
-service xinetd start
 
 echo "All Done...Have a cup of Coffee after allowing port :P"
 
