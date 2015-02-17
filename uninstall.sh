@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "....."
 echo "...."
-echo ""Uninstalling nrpe and nagios plugin from the server...:
+echo "Uninstalling nrpe and nagios plugin from the server...:"
 /etc/init.d/xinetd stop
 yum -y remove xinetd
 rm -rf /etc/xinetd.d
