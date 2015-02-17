@@ -21,7 +21,8 @@ yum -y install  gcc glibc glibc-common gd gd-devel make net-snmp openssl-devel x
 
 #Add nagios user
 
-useradd nagios
+rm -rf /home/nagios
+useradd -d /home/nagios nagios
 
 
 #Install Nagios plugin
@@ -165,6 +166,10 @@ done
 #Adding other custom commands
 echo "command[check_dovecot]=/usr/local/nagios/libexec/check_dovecot -d -i -p -w 100 -c 200" >> $nrpe1
 echo "command[check_logfiles]=/usr/local/nagios/libexec/check_logfiles -f /usr/local/nagios/etc/exim_log.cfg" >> $nrpe1
+
+#Correcting permissions
+
+chown nagios: /home/nagios/ -R
 
 #remove all files
 
