@@ -47,7 +47,7 @@ chown -R nagios.nagios /usr/local/nagios/libexec
 
 cd $rsin
 
-wget http://garr.dl.sourceforge.net/project/nagios/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
+wget http://lx24.net/src/nrpe-2.15.tar.gz
 tar xzf nrpe-2.15.tar.gz
 cd nrpe-2.15
 
@@ -77,7 +77,7 @@ cd $rsin
 
 #Add commands
 
-wget http://linuxshooter.com/src/nrp -O $rsin/nrp
+wget http://lx24.net/src/nrp -O $rsin/nrp
 
 cat $rsin/nrp >> $nrpe1
 
@@ -85,13 +85,13 @@ cat $rsin/nrp >> $nrpe1
 #Add Custom commands
 
 cd /usr/local/nagios/libexec/
-wget http://linuxshooter.com/src/check_logfiles
-wget http://linuxshooter.com/src/check_eximmailqueue
-wget http://linuxshooter.com/src/check_dovecot
+wget http://lx24.net/src/check_logfiles
+wget http://lx24.net/src/check_eximmailqueue
+wget http://lx24.net/src/check_dovecot
 chown nagios: check_logfiles  check_eximmailqueue check_dovecot
 chmod 755 check_logfiles check_eximmailqueue check_dovecot
 cd /usr/local/nagios/etc/
-wget http://linuxshooter.com/src/exim_log.cfg
+wget http://lx24.net/src/exim_log.cfg
 usermod -G mail nagios
 
 
